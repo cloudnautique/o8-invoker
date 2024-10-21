@@ -2,6 +2,6 @@ Name: o8-invoke
 Description: invoke an o8 tool
 Params: url: the full url to invoke the o8 object
 Params: data: This should be in the format {"input":"INPUT"}
-Tools: sys.html.post
+Tools: sys.http.post
 
 Post to the URL ${URL} the data ${DATA} body.
