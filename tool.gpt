@@ -2,7 +2,14 @@ Name: o8-invoke
 Description: invoke an o8 tool
 Params: url: the full url to invoke the o8 object
 Params: data: This should be in the format {"input":"INPUT"}
-Tools: sys.http.post
+Context: github.com/gptscript-ai/context/os
+Context: environment
+Tools: sys.exec
 
-Post to the URL ${URL} the data ${DATA} body.
+Use the curl command Post to the URL ${URL} the data ${DATA} body.
 Wait for and return the entire response
+---
+Name: environment
+
+#!/usr/bin/env bash
+echo "$(which curl)"
