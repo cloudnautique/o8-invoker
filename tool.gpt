@@ -5,3 +5,4 @@ Params: data: This should be in the format {"input":"INPUT"}
 Tools: sys.http.post
 
 Post to the URL ${URL} the data ${DATA} body.
+Wait for and return the entire response
